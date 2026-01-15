@@ -9,8 +9,8 @@ import link
 import bio
 
 # CONFIGURATION
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"  # Put your Bot Token here
-OWNER_TAG = "@YourUsername"
+BOT_TOKEN = "8265358758:AAEh0w0gMyVadZWguiqrYQM6xegfpcy2wiA"  # Put your Bot Token here
+OWNER_TAG = "@noxeoxnet"
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
