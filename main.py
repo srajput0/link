@@ -1,4 +1,3 @@
-
 import logging
 import asyncio 
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
@@ -10,7 +9,7 @@ import link
 import bio
 
 # CONFIGURATION
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"  # Apna Token Dalein
+BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"  # Put your Bot Token here
 OWNER_TAG = "@YourUsername"
 
 logging.basicConfig(
@@ -31,17 +30,17 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
-    # --- UPDATED MESSAGE TEXT (Hinglish) ---
+    # --- UPDATED MESSAGE TEXT (English) ---
     welcome_text = (
-        f"👋 <b>Namaste {user.first_name}!</b>\n\n"
-        f"🛡 <b>Main hu Group Security Bot.</b>\n"
+        f"👋 <b>Hello {user.first_name}!</b>\n\n"
+        f"🛡 <b>I am the Group Security Bot.</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━━\n"
-        f"😤 <b>Mera Kaam:</b> <u>Main Group me koi Link nahi rahne dunga!</u>\n"
-        f"🚀 <b>Super Fast:</b> Link aate hi turant delete karunga.\n"
-        f"👤 <b>Anti-Bio:</b> User ke Bio me link hoga to wo bhi pakad lunga.\n"
+        f"😤 <b>My Mission:</b> <u>I will not allow any links to remain in the group!</u>\n"
+        f"🚀 <b>Super Fast:</b> I delete links instantly upon detection.\n"
+        f"👤 <b>Anti-Bio:</b> If a user has a link in their Bio, I will catch them too.\n"
         f"━━━━━━━━━━━━━━━━━━━━━\n"
         f"👑 <b>Maintainer:</b> {OWNER_TAG}\n"
-        f"<i>Mujhe apne group me Add karein aur Admin banayein!</i> 👇"
+        f"<i>Add me to your group and promote me to Admin!</i> 👇"
     )
     
     await update.message.reply_text(
@@ -68,5 +67,5 @@ if __name__ == '__main__':
     # Filters.ALL
     application.add_handler(MessageHandler(filters.ALL & (~filters.COMMAND), master_message_handler))
 
-    print("Bot is running with Updated Start Message...")
+    print("Bot is running with English Start Message...")
     application.run_polling()
