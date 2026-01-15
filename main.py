@@ -9,8 +9,8 @@ import link
 import bio
 
 # --- CONFIGURATION ---
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"  # Apna Token Yahan Dalein
-OWNER_TAG = "@YourUsername"
+BOT_TOKEN = "8265358758:AAEh0w0gMyVadZWguiqrYQM6xegfpcy2wiA"  # Apna Token Yahan Dalein
+OWNER_TAG = "@nsnns"
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
